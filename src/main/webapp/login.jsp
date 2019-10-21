@@ -10,20 +10,26 @@
 <html>
 <head>
     <title>Title</title>
+    <%@ include file="partials/links.html" %>
 </head>
 <body>
-<h1>Login</h1>
-<form action="/login.jsp" method="POST">
-    Username: <input type="text" name="username"><br>
-    Password: <input type="text" name="password"><br>
-    <input type="submit" value="Submit">
+    <%@ include file="partials/navbar.html" %>
+    <h1>Login</h1>
+    <form action="/login.jsp" method="POST">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="text" name="password"><br>
+        <input type="submit" value="Submit">
 
-</form>
+    </form>
 
 
-    <c:if test="${param.username.equalsIgnoreCase('admin') && param.password.equalsIgnoreCase('password')}">
+    <c:if test="${param.username.equalsIgnoreCase('admin') and param.password.equalsIgnoreCase('password')}">
         <% response.sendRedirect("/profile.jsp"); %>
     </c:if>
+
+    <%@ include file="partials/footer.html" %>
+
+    <%@ include file="partials/bootstrapScripts.jsp" %>
 
 </body>
 </html>

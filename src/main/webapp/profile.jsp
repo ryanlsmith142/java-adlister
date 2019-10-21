@@ -10,8 +10,13 @@
 <html>
 <head>
     <title>Title</title>
+    <%@ include file="partials/links.html" %>
 </head>
 <body>
+    <%@ include file="partials/navbar.html" %>
     <h1>Welcome to the profile page</h1>
+    <%@ include file="partials/footer.html" %>
+
+    <%@ include file="partials/bootstrapScripts.jsp" %>
 </body>
 </html>
