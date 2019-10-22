@@ -1,5 +1,4 @@
-<%@ page import="java.util.Arrays" %>
-<%@ page import="java.util.List" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: smithryan
   Date: 2019-10-21
@@ -8,10 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% List<String> meatChoice = Arrays.asList();
-
-
-%>
 <html>
 <head>
     <title>Your Order</title>
@@ -31,19 +26,19 @@
 <h1>Meats</h1>
 <p>Selected Meats:
     <ul>
-    <c:forEach items="${paramValues['meats']}" var="meat">
-    <li><c:out value="${meat}" /></li>
-    </c:forEach>
+        <c:forEach items="${paramValues['meats']}" var="meat">
+        <li><c:out value="${meat}" /></li>
+        </c:forEach>
     </ul>
 </p>
 
 <h1>Non-Meats</h1>
 <p>Selected Non-Meats:
-<ul>
-    <c:forEach items="${paramValues['nonMeats']}" var="nonMeat">
-        <li><c:out value="${nonMeat}" /></li>
-    </c:forEach>
-</ul>
+    <ul>
+        <c:forEach items="${paramValues['nonMeats']}" var="nonMeat">
+            <li><c:out value="${nonMeat}" /></li>
+        </c:forEach>
+    </ul>
 </p>
 
 

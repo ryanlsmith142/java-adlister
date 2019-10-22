@@ -95,12 +95,12 @@
                         </div>
                         <!--Next Button-->
                         <div class="card-footer text-right">
-                            <button type="button" class="card-footer text-right bg-primary text-white">Next Step ></button>
+                            <a href="#cheese-sauce" id="next1" type="button" class="btn card-footer text-right bg-primary text-white">Next Step</a>
                         </div>
                     </section>
                 </div>
                 <!--Tab 2-->
-                <div class="tab-pane fade" id="cheese-sauce" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="cheese-sauce" role="tabpanel" aria-labelledby="cheese-tab">
                     <!--Card 2-->
                     <section class="card">
                         <h5 class="card-header bg-primary text-white">Choose Cheese and Sauce</h5>
@@ -266,6 +266,14 @@
         </form>
     </main>
     <%@ include file="partials/bootstrapScripts.jsp" %>
+
+    <script>
+        $('#next1').on('click', function() {
+            $('#cheese-sauce').tab('show');
+
+        })
+
+    </script>
 
 </body>
 </html>
