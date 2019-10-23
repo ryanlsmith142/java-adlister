@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/ads")
+@WebServlet(name = "AdsServlet", urlPatterns = "/ads")
 public class AdsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -15,8 +15,6 @@ public class AdsServlet extends HttpServlet {
         Ads adsDao = DaoFactory.getAdsDao();
 
         List<Ad> ads = adsDao.all();
-
-
 
         request.setAttribute("ads", ads);
 
