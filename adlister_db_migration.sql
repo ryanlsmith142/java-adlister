@@ -8,7 +8,7 @@ CREATE TABLE users(
     email VARCHAR(100) NOT NULL,
     password VARCHAR(50) NOT NULL,
     PRIMARY KEY(id)
-)
+);
 
 DROP TABLE IF EXISTS ads;
 
@@ -19,4 +19,7 @@ CREATE TABLE ads(
     description VARCHAR(500) NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users (id),
     PRIMARY KEY(id)
-)
+);
+
+INSERT INTO users (username, email, password)
+VALUES ('ryan_smith', 'ryan_smith@email.com', 'password');
